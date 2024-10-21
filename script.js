@@ -60,30 +60,43 @@
 // alert(isConvertCurrency(amount, currency))
 
 
-// let num1 = prompt("Введите первое число");
-// let num2 = prompt("Введите второе число");
-// let result = isCommonDivisor(num1, num2);
 
-// function isCommonDivisor(a, b) {
-//     while (b !== 0) {
-//         let remainder = a % b;
-//         a = b;
-//         b = remainder;
+// 1. Подсчитать сумму всех чисел в заданном пользователи диапазоне
+
+// function rangeSum (start, end) {
+//     let sum = start
+
+//     while(start < end) {
+//         start++ // start = start +1
+//         sum += start //sum = sum + start
 //     }
-//     return a;
+
+//     // for (let i = start + 1; i <= end; i++) {
+//     //     sum += i
+//     // }
+//     return sum
 // }
 
-// alert(`Наибольший общий делитель ${num1} и ${num2} равен ${result}`)
+// 2. Запросить у пользователя число и вывести все делители этого числа
+
+// function getDividers(num) {
+//     let result = []
+
+//     for (let i = 1; i <= num; i++) {
+//         if (num % i === 0) {
+//             result.push(i)
+//         }
+//     }
+
+//     return result
+// }
 
 
-let number = prompt("Введите число");
-
-function isDivisorNumber(number) {
-    for (let i = 1; i <= number; i++) {
-        if (number % i === 0) {
-            console.log(i);
-        }
-    }
+function factorial(num) {
+    if (num <= 2) return num
+    return num * factorial(num - 1)
 }
 
-
+console.log(factorial(5))
+console.log(factorial(3))
+console.log(factorial(1))
